@@ -49,4 +49,21 @@ def maxMin(*numbers):
 
     return min, max
 
-print(maxMin(5, 1, 2, 3, 4, -1))
+
+def stringCase(string, case=True):
+    string = str(string)
+    if case == True:
+        return string.upper()
+    else:
+        return string.lower()
+
+
+def allKwargs(*strings, glue=":"):
+    newString = str()
+    for i in strings:
+        if len(i) > 3:
+            newString += glue + str(i)
+    return newString.lstrip(":")
+
+
+print(allKwargs("hi", "magic", "world"))
