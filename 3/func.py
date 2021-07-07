@@ -31,4 +31,22 @@ def two(list, bl):
         print(newList)
 
 
-two([], False)
+def sumAll(*numbers):
+    sum = 0
+    for i in numbers:
+        sum = sum + i
+    return sum
+
+
+def maxMin(*numbers):
+    min = numbers[0]
+    max = numbers[0]
+    for i in numbers:
+        if i <= min:
+            min = i
+        elif i >= max:
+            max = i
+
+    return min, max
+
+print(maxMin(5, 1, 2, 3, 4, -1))
